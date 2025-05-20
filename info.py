@@ -57,7 +57,6 @@ class Info:
         self.descriptions = []
         with open("Description_of_film.txt", encoding="utf8") as f:
             lines = f.readlines()
-            # Чтение по 4 строки за раз
             for i in range(0, len(lines), 4):
                 chunk = lines[i:i+4]
                 self.descriptions.append(''.join(chunk).strip())  # Объединяет 4 строки в одну запись
